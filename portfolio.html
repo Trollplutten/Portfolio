@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Emelie Andreassen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,900;1,900&family=Syne:wght@800&display=swap" rel="stylesheet">
+    <style>
+        :root { --neon-green: #CCFF00; --black: #0a0a0a; --white: #ffffff; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--black); color: var(--white); font-family: 'Playfair Display', serif; }
+        a { text-decoration: none; color: inherit; }
+        
+        nav { padding: 20px; border-bottom: 1px solid #222; font-family: 'Syne', sans-serif; text-transform: uppercase; }
+
+        .work-header { padding: 100px 20px; background: var(--black); text-align: center; }
+        .work-header h1 { font-size: clamp(4rem, 15vw, 10rem); font-style: italic; line-height: 0.8; }
+
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); }
+        
+        .portfolio-grid {
+    display: grid;
+    /* Ändra från 'auto-fit' till ett fast antal, t.ex. '2' eller '3' */
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 0;
+}
+}
+
+.project-card { 
+    border: 1px solid #1a1a1a; 
+    position: relative; 
+    overflow: hidden; 
+    background: var(--black);
+    display: flex;
+    flex-direction: column;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 500px; /* Bestäm höjden på bildytan */
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Detta gör att bilden fyller ut ytan utan att bli ihoptryckt */
+    filter: grayscale(100%) contrast(120%); /* Din signatur-look */
+    transition: 0.5s ease;
+}
+
+.project-card:hover img {
+    filter: grayscale(0%) contrast(100%);
+    transform: scale(1.05); /* En mjuk inzoomning vid hover */
+}
+
+.project-info {
+    padding: 30px;
+    background: var(--black);
+    border-top: 1px solid #1a1a1a;
+}
+
+.project-info h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+}
+
+.project-info p {
+    font-family: 'Syne', sans-serif;
+    color: var(--neon-green);
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+        /* Grayscale effekt som försvinner vid hover */
+        .project-card { filter: grayscale(100%); transition: 0.5s ease; }
+        .project-card:hover { filter: grayscale(0%); transform: scale(0.99); }
+    </style>
+</head>
+<body>
+    <nav><a href="index.html">← Back to Home</a></nav>
+    <div class="work-header">
+        <h1>Selected Work</h1>
+    </div>
+ <main class="portfolio-grid">
+    <a href="projekt-1.html" class="project-link">
+      <div class="project-card">
+        <div class="image-wrapper">
+            <img src="images/Dyson.png" alt="Beskrivning av skulpturen">
+        </div>
+        <div class="project-info">
+            <p>3D Modeling and Animation</p>
+            <h2>Dyson Motorhead</h2>
+        </div>
+    </div>
+   </a>
+
+    <a href="projekt-2.html" class="project-link">
+       <div class="project-card">
+        <div class="image-wrapper">
+            <img src="images/Dremel_bild1.png" alt="Beskrivning av projektet">
+        </div>
+        <div class="project-info">
+            <p>3D Modeling and Animation</p>
+            <h2>Xiaomi Mijia</h2>
+        </div>
+    </div>
+</a>
+
+  <a href="projekt-3.html" class="project-link">
+   <div class="project-card">
+        <div class="image-wrapper">
+            <img src="images/vattenfinalfinalfinal.png" alt="Beskrivning av projektet">
+        </div>
+        <div class="project-info">
+            <p>Light and Composition</p>
+            <h2>Water, Fire and Light</h2>
+        </div>
+    </div>
+</a>
+  
+<div class="project-card">
+        <div class="image-wrapper">
+            <img src="images/Konditor.png" alt="Beskrivning av projektet">
+        </div>
+        <div class="project-info">
+            <p>Light and 3D Modeling</p>
+            <h2>Light Exercise</h2>
+        </div>
+    </div>
+
+
+</main>
+</body>
+</html>
